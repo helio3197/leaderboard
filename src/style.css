@@ -1,0 +1,86 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Open Sans', 'Lucida Grande', tahoma, verdana, arial, sans-serif;
+}
+
+h1 {
+  margin-left: 10%;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.outer-wrapper,
+.inner-wrapper,
+.scores-container,
+.add-scores-container,
+.scores-heading,
+.add-scores-form {
+  display: flex;
+}
+
+.outer-wrapper {
+  justify-content: center;
+  align-items: center;
+}
+
+.inner-wrapper {
+  max-width: 1200px;
+  width: 80%;
+}
+
+.scores-container,
+.add-scores-container {
+  flex-direction: column;
+}
+
+.scores-container {
+  width: 50%;
+}
+
+.scores-heading {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.scores-table-box {
+  border: 2px solid;
+}
+
+#scores-table > * {
+  padding: 6px;
+  font-weight: bold;
+}
+
+#scores-table > *:nth-child(even) {
+  background-color: lightgray;
+}
+
+.add-scores-container {
+  margin-left: 5%;
+  width: 30%;
+}
+
+.add-scores-form {
+  flex-direction: column;
+  gap: 16px;
+}
+
+.add-scores-form > input {
+  width: 100%;
+  padding: 4px;
+  border: 1px solid black;
+}
+
+.add-scores-form > :last-child {
+  align-self: flex-end;
+  width: auto;
+  padding: 4px 8px;
+}
