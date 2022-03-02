@@ -11,17 +11,17 @@
   <div class="outer-wrapper">
     <div class="inner-wrapper">
       <section class="scores-container">
-        <div>
+        <div class="scores-heading">
           <h2>Recent Scores</h2>
           <button type="button">Refresh</button>
         </div>
-        <div>
-          <ul></ul>
+        <div class="scores-table-box">
+          <ul id="scores-table"></ul>
         </div>
       </section>
       <section class="add-scores-container">
         <h2>Add your score</h2>
-        <form action="">
+        <form class="add-scores-form">
           <label for="name" hidden>Enter your name</label>
           <input type="text" id="name" name="name" placeholder="Your name">
           <label for="score" hidden>Enter your score</label>
