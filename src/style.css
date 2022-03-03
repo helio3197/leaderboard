@@ -5,6 +5,7 @@
 body {
   margin: 0;
   font-family: 'Open Sans', 'Lucida Grande', tahoma, verdana, arial, sans-serif;
+  overflow-x: hidden;
 }
 
 h1 {
@@ -15,6 +16,11 @@ ul {
   list-style: none;
   padding: 0;
   margin: 0;
+}
+
+[type="button"]:hover,
+[type="submit"]:hover {
+  cursor: pointer;
 }
 
 .outer-wrapper,
@@ -83,4 +89,19 @@ ul {
   align-self: flex-end;
   width: auto;
   padding: 4px 8px;
+}
+
+.submit-notif-sucess {
+  border: 1px solid green;
+  background-color: lightgreen;
+  position: absolute;
+  padding: 6px;
+  top: 12px;
+  right: -35%;
+  transform: translate(0);
+  transition: right 0.5s;
+}
+
+.notif-animation {
+  right: 12px;
 }
