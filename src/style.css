@@ -19,6 +19,11 @@ ul {
   margin: 0;
 }
 
+[type="button"],
+.add-scores-form > input {
+  border-radius: 10px;
+}
+
 [type="button"]:hover,
 [type="submit"]:hover {
   cursor: pointer;
@@ -75,6 +80,11 @@ ul {
   background-color: lightgray;
 }
 
+.scores {
+  display: flex;
+  justify-content: space-between;
+}
+
 .add-scores-container {
   width: 75%;
   align-self: center;
@@ -83,11 +93,6 @@ ul {
 .add-scores-form {
   flex-direction: column;
   gap: 16px;
-}
-
-[type="button"],
-.add-scores-form > input {
-  border-radius: 10px;
 }
 
 .add-scores-form > input {

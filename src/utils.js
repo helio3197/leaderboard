@@ -17,12 +17,25 @@ const showSubmitNotif = (content) => {
 };
 
 const table = document.getElementById('scores-table');
+const sortScores = (data) => {
+  let temp;
+  for (let i = 0; i < data.length; i += 1) {
+    for (let j = i + 1; j < data.length; j += 1) {
+      if (+data[j].score > +data[i].score) {
+        temp = data[i];
+        data[i] = data[j];
+        data[j] = temp;
+      }
+    }
+  }
+  return data;
+};
 
 const updateScores = () => {
   table.innerHTML = '<li>LOADING ...</li>';
   const response = getData();
   response.then((res) => {
-    table.innerHTML = `${res.result.map((item) => `<li>${item.user}: ${item.score}</li>`).join('')}`;
+    table.innerHTML = `${sortScores(res.result).map((item) => `<li class="scores"><span>${item.user}</span><span>${item.score}</span></li>`).join('')}`;
   });
 };
 
