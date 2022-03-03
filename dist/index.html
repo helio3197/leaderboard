@@ -13,7 +13,7 @@
       <section class="scores-container">
         <div class="scores-heading">
           <h2>Recent Scores</h2>
-          <button type="button">Refresh</button>
+          <button type="button" id="refresh-button">Refresh</button>
         </div>
         <div class="scores-table-box">
           <ul id="scores-table"></ul>
@@ -21,11 +21,11 @@
       </section>
       <section class="add-scores-container">
         <h2>Add your score</h2>
-        <form class="add-scores-form">
+        <form class="add-scores-form" id="add-scores">
           <label for="name" hidden>Enter your name</label>
-          <input type="text" id="name" name="name" placeholder="Your name">
+          <input type="text" id="name" name="name" placeholder="Your name" required>
           <label for="score" hidden>Enter your score</label>
-          <input type="number" id="score" name="score" placeholder="Your score" min="0">
+          <input type="number" id="score" name="score" placeholder="Your score" min="0" required>
           <input type="submit" value="Submit">
         </form>
       </section>
