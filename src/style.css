@@ -10,6 +10,7 @@ body {
 
 h1 {
   margin-left: 10%;
+  align-self: flex-start;
 }
 
 ul {
@@ -21,6 +22,7 @@ ul {
 [type="button"]:hover,
 [type="submit"]:hover {
   cursor: pointer;
+  background-color: lightgray;
 }
 
 .outer-wrapper,
@@ -33,13 +35,15 @@ ul {
 }
 
 .outer-wrapper {
-  justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 .inner-wrapper {
   max-width: 1200px;
-  width: 80%;
+  width: 85%;
+  flex-direction: column;
+  padding-bottom: 24px;
 }
 
 .scores-container,
@@ -48,7 +52,7 @@ ul {
 }
 
 .scores-container {
-  width: 50%;
+  width: 100%;
 }
 
 .scores-heading {
@@ -58,6 +62,8 @@ ul {
 
 .scores-table-box {
   border: 2px solid;
+  overflow: auto;
+  max-height: 500px;
 }
 
 #scores-table > * {
@@ -70,13 +76,18 @@ ul {
 }
 
 .add-scores-container {
-  margin-left: 5%;
-  width: 30%;
+  width: 75%;
+  align-self: center;
 }
 
 .add-scores-form {
   flex-direction: column;
   gap: 16px;
+}
+
+[type="button"],
+.add-scores-form > input {
+  border-radius: 10px;
 }
 
 .add-scores-form > input {
@@ -94,14 +105,51 @@ ul {
 .submit-notif-sucess {
   border: 1px solid green;
   background-color: lightgreen;
-  position: absolute;
+  position: fixed;
   padding: 6px;
   top: 12px;
-  right: -35%;
+  right: -75%;
   transform: translate(0);
   transition: right 0.5s;
 }
 
 .notif-animation {
-  right: 12px;
+  right: 12px !important;
+}
+
+@media (min-width: 768px) {
+  body {
+    height: 100vh;
+  }
+
+  .outer-wrapper {
+    height: 100%;
+    min-height: 375px;
+  }
+
+  .inner-wrapper {
+    max-width: 1200px;
+    width: 80%;
+    flex-direction: row;
+    height: calc(100% - 79.88px);
+    padding-bottom: 64px;
+  }
+
+  .scores-container {
+    width: 50%;
+  }
+
+  .scores-table-box {
+    overflow: auto;
+  }
+
+  .add-scores-container {
+    margin-left: 5%;
+    width: 30%;
+    align-self: auto;
+  }
+
+  .submit-notif-sucess {
+    right: -35%;
+  }
 }

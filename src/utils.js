@@ -7,7 +7,7 @@ const showSubmitNotif = (content) => {
   document.body.appendChild(div);
   setTimeout(() => {
     div.classList.add('notif-animation');
-  }, 1);
+  }, 5);
   setTimeout(() => {
     div.classList.remove('notif-animation');
   }, 4000);
