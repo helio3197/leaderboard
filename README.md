@@ -31,7 +31,7 @@ To get a local copy up and running follow these simple steps.
 
 ### Setup
 
-- Open a terminal window where you want to have installed a copy of the repository.
+- Open a terminal window where you want to have installed a clone of the repository.
 
 ### Install
 
